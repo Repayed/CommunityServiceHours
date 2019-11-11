@@ -20,7 +20,7 @@ public class Person {
         System.out.println("Amount of community hours: " + communityHours.getHours());
         System.out.println();
         System.out.println("REQUIRED AMOUNT OF HOURS: " + communityHours.getGraduationHoursAmount());
-        System.out.println("You have " + communityHours.getHours() + " out of the " + communityHours.getGraduationHoursAmount() + " required amount.");
+        System.out.println("You have " + communityHours.getHours() + " out of the " + communityHours.getGraduationHoursAmount() + " required amount of hours.");
         System.out.println();
         System.out.println("------------ Your Information ------------");
 
