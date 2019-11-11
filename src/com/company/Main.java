@@ -8,10 +8,6 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        String personName;
-        CommunityHours communityHours;
-
-
 //        CommunityHours firstCommunityHours = new CommunityHours(100);
 //        Person person = new Person(firstCommunityHours);
 //        person.getCommunityHours().setHours(100);
@@ -25,6 +21,10 @@ public class Main {
 //        Person secondPerson = new Person("IntelliJ", 99, "Unidentified", "@gmail.com", "(123)-456-7891", secondCommunityHours);
 //        printUserInformation(secondPerson, secondCommunityHours);
 //        hasMetRequirements(secondPerson);
+
+        String personName;
+        CommunityHours communityHours;
+        
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Welcome to the community hours program! (Version 1.1)");
@@ -34,8 +34,7 @@ public class Main {
         System.out.println("- Create your profile (Name & Amount of hours)");
         System.out.println("- Check the amount of hours you have");
         System.out.println("- Check the required community hours");
-        printWhiteSpace(  1);
-
+        printWhiteSpace(1);
 
         System.out.println("To get started what is your name?");
         personName = scanner.nextLine();
@@ -44,12 +43,11 @@ public class Main {
         communityHours = new CommunityHours(scanner.nextInt());
 
         scanner.nextLine();
+        scanner.close();
 
         printWhiteSpace(1);
         Person person = new Person(personName, communityHours);
         person.printPersonsCommunityHours(person, communityHours);
-
-
     }
 
 //    public static void hasMetRequirements(Person person) {
@@ -67,7 +65,7 @@ public class Main {
 //    }
 
     public static void printWhiteSpace(int amountOfLines) {
-        for(int i = 0; i <= amountOfLines; i++) {
+        for(int i = 0; i <= (amountOfLines) - 1; i++) {
             System.out.println();
         }
     }
