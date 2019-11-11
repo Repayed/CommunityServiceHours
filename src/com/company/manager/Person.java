@@ -2,45 +2,34 @@ package com.company.manager;
 
 public class Person {
     private String name;
-    private int age;
-    private String gender;
-    private String email;
-    private String phoneNumber;
     private CommunityHours communityHours;
 
-
     public Person(CommunityHours communityHours) {
-        this("Unknown", 0, "Unidentified", "None", "None", communityHours);
+        this("Unknown", communityHours);
     }
 
-    public Person(String name, int age, String gender, String email, String phoneNumber, CommunityHours communityHours) {
+    public Person(String name,CommunityHours communityHours) {
         this.name = name;
-        this.age = age;
-        this.gender = gender;
-        this.email = email;
-        this.phoneNumber = phoneNumber;
         this.communityHours = communityHours;
+    }
+
+    public void printPersonsCommunityHours(Person person, CommunityHours communityHours) {
+        System.out.println("------------ Your Information ------------");
+        System.out.println();
+        System.out.println("Your name: " + person.getName());
+        System.out.println("Amount of community hours: " + communityHours.getHours());
+        System.out.println();
+        System.out.println("REQUIRED AMOUNT OF HOURS: " + communityHours.getGraduationHoursAmount());
+        System.out.println("You have " + communityHours.getHours() + " out of the " + communityHours.getGraduationHoursAmount() + " required amount.");
+        System.out.println();
+        System.out.println("------------ Your Information ------------");
+
     }
 
     public String getName() {
         return name;
     }
 
-    public int getAge() {
-        return age;
-    }
-
-    public String getGender() {
-        return gender;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
 
     public CommunityHours getCommunityHours() {
         return communityHours;
@@ -50,19 +39,4 @@ public class Person {
         this.name = name;
     }
 
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
 }
