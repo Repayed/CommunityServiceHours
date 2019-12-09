@@ -8,33 +8,19 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-//        CommunityHours firstCommunityHours = new CommunityHours(100);
-//        Person person = new Person(firstCommunityHours);
-//        person.getCommunityHours().setHours(100);
-//        printUserInformation(person, firstCommunityHours);
-//        hasMetRequirements(person);
-//
-//        System.out.println("");
-//        System.out.println("");
-//
-//        CommunityHours secondCommunityHours = new CommunityHours(80);
-//        Person secondPerson = new Person("IntelliJ", 99, "Unidentified", "@gmail.com", "(123)-456-7891", secondCommunityHours);
-//        printUserInformation(secondPerson, secondCommunityHours);
-//        hasMetRequirements(secondPerson);
-
         String personName;
         CommunityHours communityHours;
         
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Welcome to the community hours program! (Version 1.1)");
-        printWhiteSpace(1);
+        System.out.println();
         System.out.println("In this program you'll be able to do the following!");
-        printWhiteSpace(1);
+        System.out.println();
         System.out.println("- Create your profile (Name & Amount of hours)");
         System.out.println("- Check the amount of hours you have");
         System.out.println("- Check the required community hours");
-        printWhiteSpace(1);
+        System.out.println();
 
         System.out.println("To get started what is your name?");
         personName = scanner.nextLine();
@@ -45,28 +31,9 @@ public class Main {
         scanner.nextLine();
         scanner.close();
 
-        printWhiteSpace(1);
+        System.out.println();
         Person person = new Person(personName, communityHours);
         person.printPersonsCommunityHours(person, communityHours);
     }
 
-//    public static void hasMetRequirements(Person person) {
-//        if(person.getCommunityHours().meetsGraduationRequirement()) {
-//            System.out.println("Congratulations! " + person.getName() + " has met the graduation requirement!");
-//            System.out.println(person.getName() + " currently has " + person.getCommunityHours().getHours() + " out of " + person.getCommunityHours().getGraduationHoursAmount() + ".");
-//        } else {
-//            System.out.println(person.getName() + " has not met the graduation requirement yet!");
-//            System.out.println(person.getName() + " still has " +
-//                    (person.getCommunityHours().getGraduationHoursAmount() - person.getCommunityHours().getHours()) +
-//                    " hours out of " +
-//                    person.getCommunityHours().getGraduationHoursAmount() +
-//                    " to achieve.");
-//        }
-//    }
-
-    public static void printWhiteSpace(int amountOfLines) {
-        for(int i = 0; i <= (amountOfLines) - 1; i++) {
-            System.out.println();
-        }
-    }
 }
